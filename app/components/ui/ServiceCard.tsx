@@ -14,7 +14,14 @@ export interface ServiceCardProps {
   index: number;
 }
 
-export function ServiceCard({ title, description, icon, accent, tag, index }: ServiceCardProps) {
+export function ServiceCard({
+  title,
+  description,
+  icon,
+  accent,
+  tag,
+  index,
+}: ServiceCardProps) {
   const isBlue = accent === "blue";
 
   return (
@@ -28,14 +35,14 @@ export function ServiceCard({ title, description, icon, accent, tag, index }: Se
       style={{
         boxShadow: isBlue
           ? "0 4px 50px -10px var(--blue-glow)"
-          : "0 4px 50px -10px var(--orange-glow)"
+          : "0 4px 50px -10px var(--orange-glow)",
       }}
     >
       {/* Top accent bar */}
-      <div 
+      <div
         className={cn(
           "absolute inset-x-0 top-0 h-0.75 w-full transition-opacity duration-500",
-          isBlue ? "bg-blue-primary" : "bg-orange-primary"
+          isBlue ? "bg-blue-primary" : "bg-orange-primary",
         )}
       />
 
@@ -43,7 +50,9 @@ export function ServiceCard({ title, description, icon, accent, tag, index }: Se
       <div
         className={cn(
           "pointer-events-none absolute -right-20 -top-20 z-0 h-40 w-40 rounded-full blur-[80px] transition-opacity duration-500",
-          isBlue ? "bg-blue-primary/20 group-hover:bg-blue-primary/40" : "bg-orange-primary/20 group-hover:bg-orange-primary/40"
+          isBlue
+            ? "bg-blue-primary/20 group-hover:bg-blue-primary/40"
+            : "bg-orange-primary/20 group-hover:bg-orange-primary/40",
         )}
       />
 
@@ -52,7 +61,9 @@ export function ServiceCard({ title, description, icon, accent, tag, index }: Se
           <div
             className={cn(
               "flex h-14 w-14 items-center justify-center rounded-lg bg-bg-secondary text-2xl border",
-              isBlue ? "text-blue-primary border-border-card" : "text-orange-primary border-border-card"
+              isBlue
+                ? "text-blue-primary border-border-card"
+                : "text-orange-primary border-border-card",
             )}
           >
             {icon}
@@ -65,15 +76,21 @@ export function ServiceCard({ title, description, icon, accent, tag, index }: Se
           )}
         </div>
 
-        <h3 className="mt-6 font-display text-2xl font-bold tracking-tight text-white">{title}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-text-muted">{description}</p>
-        
+        <h3 className="mt-6 font-display text-2xl font-bold tracking-tight text-white">
+          {title}
+        </h3>
+        <p className="mt-3 text-sm leading-relaxed text-text-muted">
+          {description}
+        </p>
+
         <div className="mt-8 pt-6 border-t border-border-card/50 flex-1 flex items-end">
           <a
             href="#contact"
             className={cn(
               "inline-flex items-center text-[13px] font-semibold uppercase tracking-wider transition-colors",
-              isBlue ? "text-blue-primary hover:text-blue-deep" : "text-orange-primary hover:text-orange-light"
+              isBlue
+                ? "text-blue-primary hover:text-blue-deep"
+                : "text-orange-primary hover:text-orange-light",
             )}
           >
             Learn more

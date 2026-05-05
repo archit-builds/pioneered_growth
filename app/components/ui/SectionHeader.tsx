@@ -15,9 +15,10 @@ interface SectionHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: {
-    opacity: 1, y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 export function SectionHeader({
@@ -33,8 +34,10 @@ export function SectionHeader({
     <div
       className={cn(
         "flex flex-col gap-4",
-        align === "center" ? "items-center text-center mx-auto" : "items-start text-left",
-        className
+        align === "center"
+          ? "items-center text-center mx-auto"
+          : "items-start text-left",
+        className,
       )}
       {...props}
     >
@@ -42,7 +45,7 @@ export function SectionHeader({
         <Badge>{badge}</Badge>
       </motion.div>
 
-      <motion.h2 
+      <motion.h2
         variants={fadeUp as any}
         className="font-display text-[32px] leading-[1.1] md:text-[40px] lg:text-[48px] tracking-tight"
       >
@@ -51,7 +54,7 @@ export function SectionHeader({
       </motion.h2>
 
       {description && (
-        <motion.p 
+        <motion.p
           variants={fadeUp as any}
           className="text-text-muted text-base md:text-lg max-w-2xl mt-2"
         >
