@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS, CONTACT_INFO } from "@/lib/constants";
@@ -33,11 +34,18 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-2xl font-bold tracking-tight z-50 relative"
+            className="z-50 relative flex items-center"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <span className="font-display text-white">pioneered</span>
-            <span className="font-display text-orange-primary">growth</span>
+            <Image
+              src="/logo.png"
+              alt="PioneeredGrowth"
+              width={200}
+              height={50}
+              className="object-contain h-10 w-auto md:h-12 scale-[1.8] md:scale-[2.2] origin-left"
+              priority
+              unoptimized
+            />
           </Link>
 
           {/* Desktop Nav */}

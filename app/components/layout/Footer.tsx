@@ -1,15 +1,22 @@
 import Link from "next/link";
+import Image from "next/image";
 import { NAV_LINKS } from "@/lib/constants";
 
 export function Footer() {
   return (
-    <footer className="bg-bg-secondary border-t border-border-subtle py-12 md:py-16">
+    <footer className="bg-bg-secondary border-t border-border-subtle py-8">
       <div className="container mx-auto px-4 md:px-8 bg-bg-secondary">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
           {/* Logo */}
-          <Link href="/" className="text-xl font-bold tracking-tight">
-            <span className="font-display text-white">pioneered</span>
-            <span className="font-display text-orange-primary">growth</span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="PioneeredGrowth"
+              width={200}
+              height={50}
+              className="object-contain h-10 w-auto scale-[1.8] origin-center"
+              unoptimized
+            />
           </Link>
 
           {/* Nav Links */}
@@ -27,7 +34,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Row */}
-        <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border-card gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-between pt-6 border-t border-border-card gap-4">
           <p className="text-sm text-text-faint">
             &copy; {new Date().getFullYear()} PioneeeredGrowth. All rights
             reserved.

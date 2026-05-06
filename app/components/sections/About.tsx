@@ -59,7 +59,7 @@ export function About() {
             <div className="flex flex-col">
               <div className="mb-2 h-[2px] w-20 bg-orange-primary" />
               <p className="font-display italic text-lg text-text-secondary">
-                Archit – Founder
+                Kyrell Wheatley – Founder
               </p>
             </div>
           </motion.div>

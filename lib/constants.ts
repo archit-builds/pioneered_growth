@@ -74,7 +74,7 @@ export const REASONS = [
 
 export const CONTACT_INFO = {
   phone: "+44 7432050481",
-  email: "hello@pioneeredgrowth.com",
+  email: "Kyrellwheatley8@gmail.com",
   responseTime: "Within 24 hours, guaranteed",
 };
 export const FAQS = [
