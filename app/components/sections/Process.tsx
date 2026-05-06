@@ -65,7 +65,7 @@ export function Process() {
                 {/* Horizontal Line connecting steps (hidden on last and on mobile) */}
                 {i !== PROCESS_STEPS.length - 1 && (
                   <div
-                    className="absolute top-[88px] left-[50%] z-0 hidden w-full border-t border-border-subtle lg:block 
+                    className="absolute top-22 left-[50%] z-0 hidden w-full border-t border-border-subtle lg:block 
                    transition-colors duration-500 group-hover:border-border-card"
                   />
                 )}
@@ -78,7 +78,7 @@ export function Process() {
                 {/* Colored Node (dot) */}
                 <div
                   className={cn(
-                    "relative z-10 mb-6 h-4 w-4 rounded-full flex-shrink-0",
+                    "relative z-10 mb-6 h-4 w-4 rounded-full shrink-0",
                     step.accent === "blue"
                       ? "bg-blue-primary shadow-[0_0_15px_rgba(26,140,255,0.5)]"
                       : "bg-orange-primary shadow-[0_0_15px_rgba(255,122,0,0.5)]",
@@ -89,7 +89,7 @@ export function Process() {
                 <h3 className="mb-2 text-[18px] font-bold text-white relative z-10 bg-bg-primary px-4">
                   {step.title}
                 </h3>
-                <p className="max-w-[280px] text-[13px] leading-relaxed text-text-muted relative z-10 bg-bg-primary px-4">
+                <p className="max-w-70 text-[13px] leading-relaxed text-text-muted relative z-10 bg-bg-primary px-4">
                   {step.description}
                 </p>
               </motion.div>

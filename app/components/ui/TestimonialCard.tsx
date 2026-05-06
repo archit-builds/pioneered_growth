@@ -49,7 +49,7 @@ export function TestimonialCard({
 
         {/* Author Info */}
         <div className="flex items-center gap-4 mt-auto">
-          <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border border-border-subtle bg-bg-secondary font-display text-lg font-bold text-blue-primary">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border-subtle bg-bg-secondary font-display text-lg font-bold text-blue-primary">
             {name.charAt(0)}
           </div>
           <div className="flex flex-col">

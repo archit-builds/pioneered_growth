@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { FAQS } from "@/lib/constants";
 import { Badge } from "@/app/components/ui/Badge";
 import { cn } from "@/lib/utils";
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
@@ -16,7 +16,7 @@ const fadeUp = {
   },
 };
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.12 } },
 };
@@ -86,7 +86,7 @@ export function FAQ() {
                   </span>
                   <div
                     className={cn(
-                      "ml-4 flex-shrink-0 h-8 w-8 flex items-center justify-center rounded-full bg-bg-secondary border transition-all duration-300",
+                      "ml-4 shrink-0 h-8 w-8 flex items-center justify-center rounded-full bg-bg-secondary border transition-all duration-300",
                       isOpen
                         ? "border-orange-primary text-orange-primary rotate-180"
                         : "border-border-card text-text-muted group-hover:border-orange-primary/50",

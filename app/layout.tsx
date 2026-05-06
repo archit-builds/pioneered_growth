@@ -40,6 +40,9 @@ export const metadata: Metadata = {
       "We build websites that generate real leads for real businesses.",
     type: "website",
   },
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -52,7 +55,7 @@ export default function RootLayout({
       lang="en"
       className={`${dmSans.variable} ${playfair.variable} ${dmMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col pt-[88px] relative bg-bg-primary text-text-primary">
+      <body className="min-h-full flex flex-col pt-22 relative bg-bg-primary text-text-primary">
         <Navbar />
         <main className="flex-1 flex flex-col">{children}</main>
         <Footer />
