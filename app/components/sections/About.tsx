@@ -1,12 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Badge } from "@/app/components/ui/Badge";
 import { REASONS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import React from "react";
 
-const fadeLeft = {
+const fadeLeft: Variants = {
   hidden: { opacity: 0, x: -60 },
   visible: {
     opacity: 1,
@@ -15,7 +15,7 @@ const fadeLeft = {
   },
 };
 
-const fadeRight = {
+const fadeRight: Variants = {
   hidden: { opacity: 0, x: 60 },
   visible: {
     opacity: 1,
@@ -57,7 +57,7 @@ export function About() {
             </p>
 
             <div className="flex flex-col">
-              <div className="mb-2 h-[2px] w-20 bg-orange-primary" />
+              <div className="mb-2 h-0.5 w-20 bg-orange-primary" />
               <p className="font-display italic text-lg text-text-secondary">
                 Kyrell Wheatley – Founder
               </p>
@@ -81,7 +81,7 @@ export function About() {
                   i === REASONS.length - 1 && "border-b",
                 )}
               >
-                <div className="flex-shrink-0 text-xl text-orange-primary leading-none mt-1">
+                <div className="shrink-0 text-xl text-orange-primary leading-none mt-1">
                   {reason.icon}
                 </div>
                 <div className="flex flex-col gap-2">

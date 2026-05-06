@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -16,14 +16,14 @@ const schema = z.object({
   email: z.string().email("Invalid email address"),
   phone: z.string().min(7, "Phone number is required"),
   budget: z.enum(["under-1k", "1k-3k", "3k-5k", "5k-plus"], {
-    errorMap: () => ({ message: "Please select a budget" }),
+    message: "Please select a budget",
   }),
   message: z.string().min(20, "Message must be at least 20 characters"),
 });
 
 type FormData = z.infer<typeof schema>;
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
@@ -32,7 +32,7 @@ const fadeUp = {
   },
 };
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.12 } },
 };
