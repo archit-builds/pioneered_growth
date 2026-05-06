@@ -73,7 +73,12 @@ export const REASONS = [
 ];
 
 export const CONTACT_INFO = {
-  phone: "+44 7700 000000",
+  phone: "+44 7432050481",
   email: "hello@pioneeredgrowth.com",
   responseTime: "Within 24 hours, guaranteed",
 };
+export const FAQS = [
+  { question: "Can you redesign my existing website?", answer: "Yes, we can improve and modernise your current site to enhance its design, performance, and user experience." },
+  { question: "Will my website work on mobile devices?", answer: "Absolutely. All of our websites are fully responsive and optimised to perform across desktops, tablets, and mobile devices." }
+];
+

@@ -64,14 +64,14 @@ export function Process() {
               >
                 {/* Horizontal Line connecting steps (hidden on last and on mobile) */}
                 {i !== PROCESS_STEPS.length - 1 && (
-                  <div className="absolute top-[88px] left-[50%] z-0 hidden w-full border-t border-border-subtle lg:block 
-                   transition-colors duration-500 group-hover:border-border-card" />
+                  <div
+                    className="absolute top-[88px] left-[50%] z-0 hidden w-full border-t border-border-subtle lg:block 
+                   transition-colors duration-500 group-hover:border-border-card"
+                  />
                 )}
 
                 {/* Big large Faded Number */}
-                <div
-                  className="mb-8 select-none font-display text-[64px] font-medium leading-none text-border-subtle opacity-40 transition-opacity duration-300 group-hover:opacity-60 bg-bg-primary px-4 relative z-10"
-                >
+                <div className="mb-8 select-none font-display text-[64px] font-medium leading-none text-border-subtle opacity-40 transition-opacity duration-300 group-hover:opacity-60 bg-bg-primary px-4 relative z-10">
                   {step.number}
                 </div>
 
@@ -81,7 +81,7 @@ export function Process() {
                     "relative z-10 mb-6 h-4 w-4 rounded-full flex-shrink-0",
                     step.accent === "blue"
                       ? "bg-blue-primary shadow-[0_0_15px_rgba(26,140,255,0.5)]"
-                      : "bg-orange-primary shadow-[0_0_15px_rgba(255,122,0,0.5)]"
+                      : "bg-orange-primary shadow-[0_0_15px_rgba(255,122,0,0.5)]",
                   )}
                 />
 

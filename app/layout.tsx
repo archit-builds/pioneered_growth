@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans, DM_Mono } from "next/font/google";
+import { Toaster } from "sonner";
+import { Navbar } from "@/app/components/layout/Navbar";
+import { Footer } from "@/app/components/layout/Footer";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -49,7 +52,12 @@ export default function RootLayout({
       lang="en"
       className={`${dmSans.variable} ${playfair.variable} ${dmMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col pt-[88px] relative bg-bg-primary text-text-primary">
+        <Navbar />
+        <main className="flex-1 flex flex-col">{children}</main>
+        <Footer />
+        <Toaster theme="dark" position="bottom-right" />
+      </body>
     </html>
   );
 }
